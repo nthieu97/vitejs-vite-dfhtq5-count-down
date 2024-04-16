@@ -1,8 +1,8 @@
 <script setup>
-import { reactive, computed } from 'vue'
+import { reactive, } from 'vue'
 
 const state = reactive({count:10})
-const handleClick = computed(()=>{
+const handleClick = ()=>{
   let interval = setInterval(()=>{
     if(state.count == 0){
        clearInterval(interval);
@@ -11,7 +11,7 @@ const handleClick = computed(()=>{
     }
     state.count--
   },1000)
-})
+}
 </script>
 
 <template>
